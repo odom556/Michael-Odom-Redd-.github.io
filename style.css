@@ -1,0 +1,56 @@
+.Content{
+    border-color: rgb(67, 10, 118);
+    border-style: solid;
+    border-width: 7px;
+    background-image: url(https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/17f69e5a4213b62.png);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    size: 5px;
+    color: red;
+}
+h3{
+    color:blueviolet
+}
+h2{
+    color:aqua
+}
+h4{
+    size: 5px;
+    color: rgb(67, 10, 118);
+}
+img{
+    float: left;
+}
+#Dislikes{
+    color: cyan;
+}
+#DislikesA{
+    color: gold;
+}
+#ArtWeb{
+    color: cadetblue;
+    font-family:monospace;
+}
+.Content h1{
+    color:black;
+}
+#Portfolio{
+    list-style-type: none;
+    padding-left: 0;
+}
+#Portfolio li{
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#Portfolio li:hover{
+    background: #eee;
+}
+#Portfolio a{
+    text-decoration: none;
+    color: #454545;
+}
