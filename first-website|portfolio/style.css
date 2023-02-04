@@ -1,0 +1,150 @@
+         /* portfolio styles */
+         
+         .content h1 {
+            color: black;
+        }
+
+        #portfolio {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #portfolio li {
+            background: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        #portfolio li:hover {
+            background: #eee;
+        }
+        
+        
+        #portfolio a {
+            text-decoration: none;
+            color: #454545;
+        }
+        body {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT49D6wHelRD317-h7YXHdUGgUN2ifIjy8b4Q:https://cdn.onlinewebfonts.com/svg/download_69492.svg&usqp=CAU);
+            color: rgb(0, 191, 255);
+            padding: 10px;
+            font-family: arial;
+            text-align: center;        
+        }
+        #title{
+            text-align: center;
+        }
+        #all-contents {
+          max-width: 800px;
+            margin: auto;
+        }
+     
+        /* navigation menu */
+        nav {
+            background: rgb(0, 0, 255);
+            margin: 10px;
+            display: flex;
+            padding: 10px;
+            
+        }
+        #sidebar-name {
+            display: flex;
+            align-items: center;
+            color: blue;
+            flex: 1;
+            margin: 0;
+        }
+        #nav-ul {
+            list-style-image: none;
+        }
+        .nav-li {
+            display: inline-block;
+            padding: 0 10px;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+     
+        /* main container area beneath menu */
+        main {
+            background: rgb(245, 238, 219);
+            display: flex;
+        }
+        .sidebar {
+            margin-right: 25px;
+            padding: 10px;
+        }
+        .sidebar-img {
+            height: 200px;
+        }
+        .content {
+            flex: 1;
+            padding: 15px;
+        }
+     
+        /* portfolio styles */
+        #interests {
+            border: 3px silver ridge;
+            padding: 8px;
+        }
+        h2, h3 {
+            margin: 0px;
+        }
+        
+            
+        
+        #all-contents {
+          max-width: 800px;
+            margin: auto;
+        }
+     
+        /* navigation menu */
+        
+        
+        h1 {
+            display: flex;
+            align-items: center;
+            color: white;
+            flex: 1;
+            margin: 0;
+        }
+        #nav-ul {
+            list-style-image: none;
+        }
+        .nav-li {
+            display: inline-block;
+            padding: 0 10px;
+        }
+        a {
+            text-decoration: blueviolet;
+            color: #fbff00;
+            font-size: large;
+        }
+     
+        /* main container area beneath menu */
+        main {
+            background: rgb(84, 1, 109);
+            display: flex;
+        }
+        .sidebar {
+            margin-right: 25px;
+            padding: 10px;
+        }
+        .sidebar-img {
+            width: 315px;
+        }
+        .content {
+            flex: 1;
+            padding: 15px;
+        }
+     
+        /* portfolio styles */
+        #interests {
+            border: 4px silver ridge;
+            padding: 8px;
+        }
+        h2, h3 {
+            margin: 0px;
+        }
