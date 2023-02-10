@@ -2,15 +2,23 @@
     border: 10px purple ridge;
     padding: 8px;
     width: 200px;
-    text-align: right;
-    text-transform: middle;
 }
 #ul{
-    text-align: center;
+    text-align: right;
     border: px midnightblue ridge;
 }
 #nextpage{
     border: 20px blue ridge;
     color: cyan;
     background-color: midnightblue;
+    text-align: right;
+}
+body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT49D6wHelRD317-h7YXHdUGgUN2ifIjy8b4Q:https://cdn.onlinewebfonts.com/svg/download_69492.svg&usqp=CAU);
+    color: rgb(0, 191, 255);
+    padding: 10px;
+    font-family: arial;
+}
+#h2 {
+    text-align: center;
 }
