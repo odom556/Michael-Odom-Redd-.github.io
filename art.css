@@ -1,0 +1,16 @@
+#art{
+    border: 10px purple ridge;
+    padding: 8px;
+    width: 200px;
+    text-align: right;
+    text-transform: middle;
+}
+#ul{
+    text-align: center;
+    border: px midnightblue ridge;
+}
+#nextpage{
+    border: 20px blue ridge;
+    color: cyan;
+    background-color: midnightblue;
+}
