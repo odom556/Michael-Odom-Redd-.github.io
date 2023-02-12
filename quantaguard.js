@@ -4,10 +4,8 @@ var main = function(){
     smooth();
     
     //Code
-    //{
     
     //Standards
-    //{
     noStroke();
     textAlign(CENTER, CENTER);
     
@@ -25,10 +23,8 @@ var main = function(){
         fill(colored);
         text(message, x, y);
     };
-    //}
     
     //bg_image
-    //{
     var bg_image;
     background(0, 0);
     for(var i=0; i<8; i++){
@@ -47,10 +43,8 @@ var main = function(){
         }
     }
     bg_image = get (40, 40, width-40, height-40);
-    //}
     
     //Arrays Stuff
-    //{
     var achievements = [
         ["Getting Started", "You just finished the tutorial.", false, 0], 
         ["First Kill", "You just killed a guy.", false, 0],
@@ -94,10 +88,8 @@ var main = function(){
         ["Amount", "Per Second", 0, 1, 100, ["Upgrade the amount you", " earn at any given", " time."]],
         ["Bonus", "Per Wave", 0, 500, 500, ["Upgrade the amount you", " receive at the end", " of each wave."]]
     ];
-    //}
     
     //Game Settings
-    //{
     var money = 2000, moneyCounter = 0;
     
     var waveSize = 25, curSize = 0, waveCount = [0, 0];
@@ -119,10 +111,8 @@ var main = function(){
     ];
     
     var gameOver = false;
-    //}
     
     //Enemies object
-    //{
     var Enemy_Bank = ["", "", "", "", "", ""];
     var enemyTime = 800;
     var presence = [0, 0, 0, 0, 0, 0, 0, 0];
@@ -274,10 +264,8 @@ var main = function(){
             achievements[2][2]=true;
         }
     };
-    //}
     
     //Bullets object
-    //{
     var Bullet = function(type, pos, damage){
         this.type = type;
         this.pos = pos;
@@ -402,10 +390,8 @@ var main = function(){
         }
     };
     var bullets = [];
-    //}
     
     //Weapons object
-    //{
     var Weapon_Bank = [
         ["Archer", 0, 50, [400, 400], ["Shoots arrows at enemies."]],
         ["Wall", 0, 100, [400, 400], ["Blocks the progress of", " enemies."]],
@@ -608,10 +594,8 @@ var main = function(){
         popMatrix();
     };
     var shovel = new Shovel();
-    //}
     
     //toolBar function
-    //{
     var tools = ["Weapons", "$-Makers", "Settings", ""];
     var heights = [0, 100, 100, 100, 100], aHeights = [0, 100, 100, 100, 100];
     var difference = 0;
@@ -913,10 +897,8 @@ var main = function(){
             }
         popMatrix();
     };
-    //}
     
     //locator function
-    //{
     var locator = function(){
         if(mouseX>40&&mouseX<width-40&&mouseY>40&&mouseY<height-40-abs(aHeights[0])/100*20&&selected!==0){
             var x = round((mouseX+20)/40)*40-40;
@@ -934,10 +916,8 @@ var main = function(){
             }
         }
     };
-    //}
     
     //drawObjects function
-    //{
     var drawObjects = function(){
         for(var i=0; i<weapons.length; i++){
             weapons[i].draw(); 
@@ -986,10 +966,8 @@ var main = function(){
             }
         }
     };
-    //}
     
     //createEnemies function
-    //{
     var modulo = 500;
     var createEnemies = function(){
         enemyTime++;
@@ -1023,10 +1001,8 @@ var main = function(){
             curSize++;
         }
     };
-    //}
     
     //menu board
-    //{
     var optionList = ["Back", "Pause", "Restart"];
     var pause = -1;
     var options = function(){
@@ -1105,10 +1081,8 @@ var main = function(){
             text(optionList[i], 380, i*35+65);
         }
     };
-    //}
     
     //different slides
-    //{
     var Menu = function(){
         fill(bgcolor);
         rect(0, 0, width, height);
@@ -1529,7 +1503,6 @@ var main = function(){
             text("Back", 30, 370);
         }
     };
-    //}
     
     draw = function() {
         background(155, 155, 155);
@@ -1585,6 +1558,6 @@ var main = function(){
             money = 1000000;
         }
     };
-    //}
+    
     };
     main();
