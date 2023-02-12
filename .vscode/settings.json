@@ -1,6 +1,7 @@
 {
-  "workbench.editorAssociations": {   
-      "*.md": "vscode.markdown.preview.editor"
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor",
+    "*.js": "default"
   },
   "liveServer.settings.port": 5501
 }
