@@ -5,7 +5,6 @@
 }
 #ul{
     text-align: right;
-    border: px midnightblue ridge;
 }
 #nextpage{
     border: 20px blue ridge;
@@ -21,4 +20,8 @@ body {
 }
 #h2 {
     text-align: center;
+}
+a{
+    color:yellow;
+    text-decoration: none;
 }
