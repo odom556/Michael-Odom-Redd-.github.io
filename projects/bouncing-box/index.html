@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: blue;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
@@ -40,6 +40,8 @@
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
+			var boardHeight = board.height()
+			
 
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
@@ -48,8 +50,9 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
+			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
+				box.css("top", newPositionY);
 			}
 
 			// changes the text displayed on the Box
@@ -57,13 +60,23 @@
 				box.text(newText);
 			}
 
+			
+
 			//////////////////////////////////////////////////////////////////
 			/////////////////// YOUR CODE BELOW HERE /////////////////////////
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
 
+			var rand = Math.random() * 100
+			var posX = 0
+			var posY = 100
+			var ratX = 10
+			var ratY = 10
+			var sco = 0
+			
+			
+			changeBoxText(sco)
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -71,8 +84,18 @@
 			turn it around! 
 			*/
 			function update() {
-				
-
+				posX += ratX
+				posY += ratY
+				moveBoxTo(posX, posY)
+				if (posX >= boardWidth){
+					ratX = -ratX
+				} else if (posX <= -1){
+					ratX = -ratX
+				} else if (posY >= boardHeight){
+					ratY = -ratY
+				} else if (posY <= -1){
+					ratY = -ratY
+				} 
 			};
 
 			/* 
@@ -81,9 +104,13 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
-
-
+				posX = rand
+				ratX += 10
+				posY = rand
+				ratY += 11
+				sco += 1
+				changeBoxText(sco)
+				randCol()
 			};
 		})();
 	</script>
