@@ -68,8 +68,8 @@
 			
 			// TODO 2 - Variable declarations 
 
-			var rand = Math.random() * 100
-			var posX = 0
+			var rand = Math.random() * 500
+			var posX = 100
 			var posY = 100
 			var ratX = 10
 			var ratY = 10
@@ -87,13 +87,13 @@
 				posX += ratX
 				posY += ratY
 				moveBoxTo(posX, posY)
-				if (posX >= boardWidth){
+				if (posX >= boardWidth-65){
 					ratX = -ratX
-				} else if (posX <= -1){
+				} else if (posX <= 1){
 					ratX = -ratX
-				} else if (posY >= boardHeight){
+				} else if (posY >= boardHeight-65){
 					ratY = -ratY
-				} else if (posY <= -1){
+				} else if (posY <= 1){
 					ratY = -ratY
 				} 
 			};
@@ -105,12 +105,11 @@
 			*/
 			function handleBoxClick() {
 				posX = rand
-				ratX += 10
 				posY = rand
+				ratX += 10
 				ratY += 11
 				sco += 1
 				changeBoxText(sco)
-				randCol()
 			};
 		})();
 	</script>
