@@ -30,7 +30,7 @@ var init = function (window) {
             circles.push(circle);
         }
         // TODO 3 / 7 : Call the drawCircle() function 
-        for (let i = 0; i < 500; i++) {
+        for (let i = 0; i < 100; i++) {
             drawCircle();
             physikz.addRandomVelocity(circle, canvas, 10, 10);   
         }
@@ -67,14 +67,14 @@ var init = function (window) {
         game.checkCirclePosition = function(circle) {
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width ) {
-                circle.x = 0;
-            } if ( circle.x < 0 ) {
-                circle.x = canvas.width;
-            } if ( circle.y > canvas.height ) {
-                circle.y = 0;
-            } if ( circle.y < 0 ) {
-                circle.y = canvas.height;
+            if ( circle.x > canvas.width + 50) {
+                circle.x = -50;
+            } if ( circle.x < -5 ) {
+                circle.x = canvas.width + 50;
+            } if ( circle.y > canvas.height + 50) {
+                circle.y = -50;
+            } if ( circle.y < -50) {
+                circle.y = canvas.height + 50;
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
