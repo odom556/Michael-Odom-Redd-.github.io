@@ -39,17 +39,28 @@ var background = function (window) {
             // TODO 1:
             // this currently fills the background with an obnoxious yellow;
             // you should modify both the height and color to suit your game
-            var backgroundFill = draw.rect(canvasWidth,canvasHeight,'yellow');
+            var backgroundFill = draw.rect(canvasWidth,canvasHeight,'blue');
             background.addChild(backgroundFill);
             
             // TODO 2: - Add a moon and starfield
-            
-            
+            var shape = draw.bitmap(canvasHeight, canvasHeight, 'img/moon.png');
+            for(var i = 0; i < 101; i++){
+            var circle = draw.circle(10, "white", "LightGray", 2);
+circle.x = canvasWidth * Math.random();
+circle.y = groundY * Math.random();
+background.addChild(circle);
+            }
             // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
-            
-            
+            var buildings = []
+            for (var i = 0; i < 5; i++) {
+                var buildingHeight = Math.random() * 300;
+                var building = draw.rect(75, buildingHeight, "LightGray", "Black", 1);
+                building.x = 200 * i;
+                building.y = groundY - buildingHeight;
+                background.addChild(building);
+                buildings.push(building);
+              }
             // TODO 3: Part 1 - Add a tree
-            
             
         } // end of render function - DO NOT DELETE
         
@@ -63,10 +74,14 @@ var background = function (window) {
             var groundY = ground.y;
             
             // TODO 3: Part 2 - Move the tree!
-            
+          
             
             // TODO 4: Part 2 - Parallax
-            
+            for (var i = 0; i < building.length; i++) {
+                var move = building[i];
+                building.x = building.x - move
+                // code to do something with each element
+              }
 
         } // end of update function - DO NOT DELETE
         
@@ -83,6 +98,12 @@ var background = function (window) {
         
         /* render and return the background */
         render();
+        var moon = draw.bitmap("img/moon.png");
+        moon.x = 300;
+        moon.y = 0;
+        moon.scaleX = 1.0;
+        moon.scaleY = 1.0;
+        background.addChild(moon);
         return background;
     };
 };
